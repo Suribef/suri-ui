@@ -37,3 +37,20 @@
   --sui-color-info: #dbeafe;
   --sui-color-info-foreground: #1e40af;
 }
+
+/* Screen reader only utility
+   Oculta el elemento visualmente pero lo mantiene accesible.
+   Usado por Spinner, futuros campos de formulario y otros componentes
+   que necesitan texto para lectores de pantalla sin impacto visual.
+   Se declara en tokens para inyección única — no repetir en módulos. */
+.sui-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
