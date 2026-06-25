@@ -47,6 +47,32 @@ Cada ADR sigue la estructura de Michael Nygard con extensiones para el contexto 
 | ⚠️ Deprecado | Vigente pero planificado para reemplazo |
 | 🔄 Supersedido | Reemplazado por otro ADR (incluye referencia) |
 
+---
+
+## Decisiones pendientes de documentar (Storybook)
+
+Antes de la implementación de Storybook, se registran aquí las decisiones de diseño para que el ADR correspondiente pueda redactarse contra decisiones ya tomadas:
+
+**Stories representativas vs exhaustivas**
+
+Se adoptará el enfoque **representativo**: 4–6 stories por componente mostrando intención de uso, no cobertura mecánica de combinaciones de props.
+
+```
+Button.Default      → caso más común, sin configuración
+Button.Loading      → estado importante con implicaciones de a11y
+Button.WithIcons    → composición (leftIcon + rightIcon)
+Button.Destructive  → variante semántica (variant="danger")
+Button.Sizes        → las tres variantes sm/md/lg juntas
+```
+
+El enfoque exhaustivo (un story por cada combinación) es útil con Chromatic para QA visual automatizado. Sin Chromatic en v1.0, el enfoque representativo demuestra criterio editorial y es más útil para onboarding de consumidores.
+
+**`autodocs` vs documentación manual**
+
+Se usará `autodocs: 'tag'` en `.storybook/main.ts` con `tags: ['autodocs']` en cada story file. Genera automáticamente la tabla de props desde los tipos de TypeScript — la documentación y los tipos son la misma fuente de verdad, sin duplicación manual.
+
+Estas decisiones se formalizarán en **ADR-020** al implementar Storybook.
+
 ## Cómo agregar un ADR
 
 1. Crear el archivo: `ADR-NNN-titulo-descriptivo.md`

@@ -4,8 +4,8 @@
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
 | **Fecha**   | 2025-06                        |
-| **Autores** | Sergio Uribe Frenkel           |
-| **Proyecto**| SuriUI — `@suribef/suri-ui`    |
+| **Autores** | Sergio Uribe                   |
+| **Proyecto**| SuriUI — `@suribef/suri-ui`   |
 | **Componentes afectados** | `Input`, `Textarea`, `Select`, y cualquier componente con mensajes dinámicos |
 | **Revisa**  | ADR-010 (aria-describedby condicional) |
 
@@ -339,6 +339,45 @@ it('links input to helper text via aria-describedby', () => {
 ```
 
 El primer test verifica que el contenedor está en el DOM vacío — garantizando que la live region esté registrada. Este test es la especificación ejecutable de la estrategia de montaje.
+
+---
+
+## Principio de testing derivado: `getByRole` vs `container.querySelector`
+
+El trabajo en Select reveló un principio de testing que aplica retroactivamente a todos los componentes de SuriUI y debe guiar los tests futuros:
+
+```
+getByRole / getByLabelText  → verifica comportamiento accesible
+                               (el elemento existe Y es anunciable por lectores de pantalla)
+
+container.querySelector     → verifica estructura DOM y atributos HTML
+                               (el elemento existe en el DOM con las propiedades correctas)
+```
+
+**Caso concreto que motivó el principio — Select placeholder:**
+
+```tsx
+// ❌ Falla correctamente — hidden excluye el elemento del árbol de accesibilidad
+screen.getByRole('option', { name: 'Selecciona un país' })
+
+// ✅ Correcto — verifica que el elemento existe en el DOM con los atributos esperados
+const placeholder = container.querySelector('option[value=""]')
+expect(placeholder).toBeInTheDocument()
+expect(placeholder).toBeDisabled()
+expect(placeholder).toHaveAttribute('hidden')
+```
+
+El placeholder `disabled hidden` no debe ser encontrable por `getByRole` — esa es exactamente la propiedad que se está verificando. Un test que usa `getByRole` para verificar que el placeholder existe *como opción accesible* estaría probando lo contrario de la intención.
+
+**Aplicación en los tests existentes:**
+
+Los tests que verifican `aria-describedby` apuntando a un elemento vacío (ADR-012) usan correctamente `document.getElementById(descId!)` en lugar de `getByRole` — el contenedor de descripción vacío no tiene rol ARIA, por lo que `getByRole` no podría encontrarlo.
+
+Los tests que verifican el asterisco `aria-hidden` usan `screen.getByText('*')` + `.closest('[aria-hidden="true"]')` — correcto: el texto existe en el DOM pero la query explícitamente verifica que está marcado como inaccesible.
+
+**Regla para tests futuros:**
+
+> Antes de escribir una query de test, pregunta: ¿estoy verificando que el elemento *es accesible* o que *existe en el DOM con ciertos atributos*? La primera usa `getByRole`/`getByLabelText`; la segunda usa `container.querySelector` o `getByText` + atributo assertion.
 
 ---
 
