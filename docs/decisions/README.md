@@ -20,6 +20,7 @@ Un ADR documenta una decisión técnica significativa tomada en el proyecto: el 
 | [ADR-010](./ADR-010-aria-describedby-conditional.md) | `aria-describedby` condicional vs siempre presente | ✅ Aceptado |
 | [ADR-011](./ADR-011-aria-invalid-undefined-vs-false.md) | `aria-invalid` con `undefined` en lugar de `false` | ✅ Aceptado |
 | [ADR-012](./ADR-012-aria-live-region-mounting-strategy.md) | Estrategia de montaje de `aria-live` regions para anuncios dinámicos | ✅ Aceptado |
+| [ADR-013](./ADR-013-card-polymorphic-as-prop.md) | Prop `as` con unión acotada vs generics polimórficos completos en Card | ✅ Aceptado |
 
 ## Formato
 

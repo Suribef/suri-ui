@@ -19,3 +19,9 @@ export type {
   CardBodyProps,
   CardFooterProps
 } from './components/Card'
+
+export { Stack } from './components/Stack'
+export type { StackProps } from './components/Stack'
+
+export { Divider } from './components/Divider'
+export type { DividerProps } from './components/Divider'
