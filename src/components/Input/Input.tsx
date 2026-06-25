@@ -29,7 +29,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const inputId = id ?? generatedId
     const descriptionId = `${inputId}-description`
 
-    const description = error ?? helperText
+    // Normalizar a undefined cuando el string está vacío.
+    // :empty en CSS falla con strings vacíos ('') porque React
+    // los renderiza como text nodes en el DOM.
+    const description = error || helperText || undefined
 
     return (
       <div
