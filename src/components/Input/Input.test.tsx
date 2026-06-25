@@ -50,7 +50,7 @@ describe('Input', () => {
   })
 
   it('always renders description container for aria-live registration', () => {
-    const { container } = render(<Input label="Email" />)
+    render(<Input label="Email" />)
     const input = screen.getByRole('textbox')
     const descId = input.getAttribute('aria-describedby')
     expect(descId).toBeTruthy()
