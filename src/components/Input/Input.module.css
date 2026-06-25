@@ -84,3 +84,10 @@
 .descriptionError {
   color: var(--sui-color-text-error);
 }
+
+/* Oculta el contenedor de descripción cuando está vacío.
+   El elemento permanece en el DOM para que aria-live esté
+   registrado antes de recibir contenido dinámico. */
+.description:empty {
+  display: none;
+}

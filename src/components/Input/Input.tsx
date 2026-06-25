@@ -30,7 +30,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const descriptionId = `${inputId}-description`
 
     const description = error ?? helperText
-    const hasDescription = !!description
 
     return (
       <div
@@ -39,6 +38,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           fullWidth && styles.fullWidth,
           disabled && styles.disabled
         )}
+        data-fullwidth={fullWidth || undefined}
         data-error={!!error || undefined}
         data-disabled={disabled || undefined}
       >
@@ -65,22 +65,11 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           required={required}
           aria-required={required || undefined}
           aria-invalid={!!error || undefined}
-          aria-describedby={hasDescription ? descriptionId : undefined}
+          aria-describedby={descriptionId}
           {...props}
         />
 
-        {hasDescription && (
-          <span
-            id={descriptionId}
-            className={cn(
-              styles.description,
-              error ? styles.descriptionError : styles.descriptionHelper
-            )}
-            aria-live={error ? 'polite' : undefined}
-          >
-            {description}
-          </span>
-        )}
+        <span id={descriptionId} className={cn(styles.description, error ? styles.descriptionError : styles.descriptionHelper)} aria-live="polite" aria-atomic="true">{description}</span>
       </div>
     )
   }

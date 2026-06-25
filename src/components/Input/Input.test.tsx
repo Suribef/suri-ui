@@ -49,9 +49,13 @@ describe('Input', () => {
     expect(document.getElementById(descId!)).toHaveTextContent('Texto de ayuda')
   })
 
-  it('does not set aria-describedby when no helper or error', () => {
-    render(<Input label="Email" />)
-    expect(screen.getByRole('textbox')).not.toHaveAttribute('aria-describedby')
+  it('always renders description container for aria-live registration', () => {
+    const { container } = render(<Input label="Email" />)
+    const input = screen.getByRole('textbox')
+    const descId = input.getAttribute('aria-describedby')
+    expect(descId).toBeTruthy()
+    expect(document.getElementById(descId!)).toBeInTheDocument()
+    expect(document.getElementById(descId!)).toBeEmptyDOMElement()
   })
 
   // — Estado error —
@@ -115,8 +119,13 @@ describe('Input', () => {
   })
 
   // — fullWidth —
-  it('sets data on wrapper for fullWidth', () => {
+  it('sets data-fullwidth on wrapper when fullWidth is true', () => {
     const { container } = render(<Input fullWidth />)
-    expect(container.firstChild).toBeInTheDocument()
+    expect(container.firstChild).toHaveAttribute('data-fullwidth')
+  })
+
+  it('does not set data-fullwidth when fullWidth is false', () => {
+    const { container } = render(<Input />)
+    expect(container.firstChild).not.toHaveAttribute('data-fullwidth')
   })
 })
