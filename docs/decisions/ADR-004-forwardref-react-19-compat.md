@@ -4,8 +4,8 @@
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
 | **Fecha**   | 2025-06                        |
-| **Autores** | Sergio Uribe                   |
-| **Proyecto**| SuriUI — `@suribef/suri-ui`   |
+| **Autores** | Sergio Uribe Frenkel           |
+| **Proyecto**| SuriUI — `@suribef/suri-ui`    |
 
 ---
 

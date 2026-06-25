@@ -36,6 +36,25 @@
   /* Semantic — Info */
   --sui-color-info: #dbeafe;
   --sui-color-info-foreground: #1e40af;
+
+  /* Form — Border */
+  --sui-color-border: #d1d5db;
+  --sui-color-border-focus: var(--sui-color-primary);
+  --sui-color-border-error: var(--sui-color-danger);
+
+  /* Form — Surface */
+  --sui-color-input-bg: #ffffff;
+  --sui-color-input-bg-disabled: #f9fafb;
+
+  /* Form — Text */
+  --sui-color-text-primary: #111827;
+  --sui-color-text-secondary: #6b7280;
+  --sui-color-text-placeholder: #9ca3af;
+  --sui-color-text-error: var(--sui-color-danger);
+  --sui-color-text-disabled: #9ca3af;
+
+  /* Focus ring — accesibilidad visual para navegación por teclado */
+  --sui-focus-ring: 0 0 0 3px rgba(99, 102, 241, 0.25);
 }
 
 /* Screen reader only utility

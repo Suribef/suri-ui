@@ -14,6 +14,8 @@ Un ADR documenta una decisión técnica significativa tomada en el proyecto: el 
 | [ADR-004](./ADR-004-forwardref-react-19-compat.md) | `forwardRef` con compatibilidad React 19 | ✅ Aceptado |
 | [ADR-005](./ADR-005-design-tokens-single-import.md) | Design Tokens importados una sola vez en `src/index.ts` | ✅ Aceptado |
 | [ADR-006](./ADR-006-process-env-node-env-vs-import-meta-env.md) | `process.env.NODE_ENV` vs `import.meta.env.DEV` para dev warnings en librerías distribuidas | ✅ Aceptado |
+| [ADR-007](./ADR-007-spinner-standalone-vs-button-dependency.md) | Spinner standalone vs dependencia interna de Button | ✅ Aceptado |
+| [ADR-008](./ADR-008-aria-live-configurable.md) | `aria-live` configurable con `"polite"` como default en Spinner | ✅ Aceptado |
 
 ## Formato
 
