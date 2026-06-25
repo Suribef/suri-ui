@@ -16,6 +16,10 @@ Un ADR documenta una decisión técnica significativa tomada en el proyecto: el 
 | [ADR-006](./ADR-006-process-env-node-env-vs-import-meta-env.md) | `process.env.NODE_ENV` vs `import.meta.env.DEV` para dev warnings en librerías distribuidas | ✅ Aceptado |
 | [ADR-007](./ADR-007-spinner-standalone-vs-button-dependency.md) | Spinner standalone vs dependencia interna de Button | ✅ Aceptado |
 | [ADR-008](./ADR-008-aria-live-configurable.md) | `aria-live` configurable con `"polite"` como default en Spinner | ✅ Aceptado |
+| [ADR-009](./ADR-009-useid-vs-uuid-label-association.md) | `useId()` vs UUID manual para asociación label-input | ✅ Aceptado |
+| [ADR-010](./ADR-010-aria-describedby-conditional.md) | `aria-describedby` condicional vs siempre presente | ✅ Aceptado |
+| [ADR-011](./ADR-011-aria-invalid-undefined-vs-false.md) | `aria-invalid` con `undefined` en lugar de `false` | ✅ Aceptado |
+| [ADR-012](./ADR-012-aria-live-region-mounting-strategy.md) | Estrategia de montaje de `aria-live` regions para anuncios dinámicos | ✅ Aceptado |
 
 ## Formato
 

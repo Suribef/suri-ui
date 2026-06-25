@@ -11,3 +11,11 @@ export type { SpinnerProps } from './components/Spinner'
 
 export { Input } from './components/Input'
 export type { InputProps } from './components/Input'
+
+export { Card, CardHeader, CardBody, CardFooter } from './components/Card'
+export type {
+  CardProps,
+  CardHeaderProps,
+  CardBodyProps,
+  CardFooterProps
+} from './components/Card'

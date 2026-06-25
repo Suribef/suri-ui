@@ -1,0 +1,47 @@
+/* NO incluir @import de tokens */
+
+/* ── Card raíz ── */
+.card {
+  position: relative;
+  background-color: var(--sui-color-card-bg);
+  border-radius: var(--sui-radius-lg);
+  /* overflow:hidden clippea imágenes hijas respetando border-radius.
+     Side effect: hijos con position:absolute quedan clippeados.
+     Dropdowns y tooltips deben renderizarse fuera del Card (portal pattern). */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.bordered {
+  border: 1px solid var(--sui-color-card-border);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Shadows */
+.shadow-sm { box-shadow: var(--sui-shadow-sm); }
+.shadow-md { box-shadow: var(--sui-shadow-md); }
+.shadow-lg { box-shadow: var(--sui-shadow-lg); }
+
+/* ── Subcomponentes ── */
+.header {
+  padding: var(--sui-space-4) var(--sui-space-4) var(--sui-space-3);
+}
+
+.headerDivided {
+  border-bottom: 1px solid var(--sui-color-card-border);
+}
+
+.body {
+  padding: var(--sui-space-4);
+}
+
+.footer {
+  padding: var(--sui-space-3) var(--sui-space-4) var(--sui-space-4);
+}
+
+.footerDivided {
+  border-top: 1px solid var(--sui-color-card-border);
+}
