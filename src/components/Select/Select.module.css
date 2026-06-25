@@ -1,0 +1,89 @@
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--sui-space-2);
+}
+
+.fullWidth { width: 100%; }
+
+/* Label — idéntico a Input y Textarea */
+.label {
+  font-family: var(--sui-font-sans);
+  font-size: var(--sui-font-size-sm);
+  font-weight: var(--sui-font-weight-medium);
+  color: var(--sui-color-text-primary);
+  cursor: pointer;
+}
+
+.required { color: var(--sui-color-text-error); }
+
+/* Contenedor relativo para el chevron */
+.selectWrapper {
+  position: relative;
+  display: flex;
+}
+
+/* appearance:none + SVG data URI normaliza el select entre browsers
+   y evita que Chrome/Safari muestren su propio chevron. */
+.select {
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--sui-space-8) 0 var(--sui-space-3);
+  font-family: var(--sui-font-sans);
+  font-size: var(--sui-font-size-md);
+  color: var(--sui-color-text-primary);
+  background-color: var(--sui-color-input-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--sui-space-3) center;
+  background-size: var(--sui-select-chevron-size);
+  border: 1.5px solid var(--sui-color-border);
+  border-radius: var(--sui-radius-md);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color var(--sui-transition-fast),
+              box-shadow var(--sui-transition-fast);
+  box-sizing: border-box;
+}
+
+.select:focus {
+  border-color: var(--sui-color-border-focus);
+  box-shadow: var(--sui-focus-ring);
+}
+
+/* Estado error */
+.selectError {
+  border-color: var(--sui-color-border-error);
+}
+
+.selectError:focus {
+  border-color: var(--sui-color-border-error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* Estado disabled */
+.select:disabled {
+  background-color: var(--sui-color-input-bg-disabled);
+  color: var(--sui-color-text-disabled);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.wrapper.disabled .label {
+  color: var(--sui-color-text-disabled);
+  cursor: not-allowed;
+}
+
+/* Descripción */
+.description {
+  font-family: var(--sui-font-sans);
+  font-size: var(--sui-font-size-sm);
+  line-height: 1.4;
+}
+
+.description:empty { display: none; }
+
+.descriptionHelper { color: var(--sui-color-text-secondary); }
+.descriptionError  { color: var(--sui-color-text-error); }

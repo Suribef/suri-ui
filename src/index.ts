@@ -30,3 +30,11 @@ export { Textarea } from './components/Textarea'
 export type { TextareaProps } from './components/Textarea'
 
 export { useCombinedRef } from './utils/useCombinedRef'
+
+export { Select } from './components/Select'
+export type {
+  SelectProps,
+  SelectItem,
+  SelectOption,
+  SelectOptionGroup
+} from './components/Select'

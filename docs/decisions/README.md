@@ -25,6 +25,8 @@ Un ADR documenta una decisión técnica significativa tomada en el proyecto: el 
 | [ADR-015](./ADR-015-divider-semantic-vs-decorative.md) | Divider semántico (`<hr>`) vs decorativo (`<div aria-hidden>`) y orientación vertical | ✅ Aceptado |
 | [ADR-016](./ADR-016-use-combined-ref.md) | `useCombinedRef` — combinar ref interno con forwardRef externo | ✅ Aceptado |
 | [ADR-017](./ADR-017-textarea-api-and-autoresize.md) | Decisiones de API y comportamiento específicas de Textarea | ✅ Aceptado |
+| [ADR-018](./ADR-018-select-native-vs-custom-listbox.md) | `<select>` nativo vs custom listbox con Floating UI | ✅ Aceptado |
+| [ADR-019](./ADR-019-select-implementation-details.md) | Detalles de implementación del Select nativo: chevron SVG, placeholder y API de opciones | ✅ Aceptado |
 
 ## Formato
 

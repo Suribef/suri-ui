@@ -78,6 +78,9 @@
   /* Textarea */
   --sui-textarea-min-height: 80px;
   --sui-textarea-max-height: 400px;
+
+  /* Select */
+  --sui-select-chevron-size: 16px;
 }
 
 /* Screen reader only utility
