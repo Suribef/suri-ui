@@ -1,0 +1,26 @@
+:root {
+  --sui-color-primary: #6366f1;
+  --sui-color-primary-hover: #4f46e5;
+  --sui-color-primary-foreground: #ffffff;
+  --sui-color-secondary: #f4f4f5;
+  --sui-color-secondary-hover: #e4e4e7;
+  --sui-color-secondary-foreground: #18181b;
+  --sui-color-danger: #ef4444;
+  --sui-color-danger-hover: #dc2626;
+  --sui-color-danger-foreground: #ffffff;
+  --sui-color-ghost-hover: rgba(0, 0, 0, 0.06);
+
+  --sui-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --sui-font-size-sm: 0.875rem;
+  --sui-font-size-md: 1rem;
+  --sui-font-size-lg: 1.125rem;
+  --sui-font-weight-medium: 500;
+
+  --sui-space-2: 0.5rem;
+  --sui-space-3: 0.75rem;
+  --sui-space-4: 1rem;
+  --sui-space-6: 1.5rem;
+
+  --sui-radius-md: 8px;
+  --sui-transition-fast: 120ms ease;
+}
