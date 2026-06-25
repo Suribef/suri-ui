@@ -21,6 +21,10 @@ Un ADR documenta una decisión técnica significativa tomada en el proyecto: el 
 | [ADR-011](./ADR-011-aria-invalid-undefined-vs-false.md) | `aria-invalid` con `undefined` en lugar de `false` | ✅ Aceptado |
 | [ADR-012](./ADR-012-aria-live-region-mounting-strategy.md) | Estrategia de montaje de `aria-live` regions para anuncios dinámicos | ✅ Aceptado |
 | [ADR-013](./ADR-013-card-polymorphic-as-prop.md) | Prop `as` con unión acotada vs generics polimórficos completos en Card | ✅ Aceptado |
+| [ADR-014](./ADR-014-stack-gap-css-custom-property.md) | Gap en Stack via CSS custom property inline vs clases CSS por valor | ✅ Aceptado |
+| [ADR-015](./ADR-015-divider-semantic-vs-decorative.md) | Divider semántico (`<hr>`) vs decorativo (`<div aria-hidden>`) y orientación vertical | ✅ Aceptado |
+| [ADR-016](./ADR-016-use-combined-ref.md) | `useCombinedRef` — combinar ref interno con forwardRef externo | ✅ Aceptado |
+| [ADR-017](./ADR-017-textarea-api-and-autoresize.md) | Decisiones de API y comportamiento específicas de Textarea | ✅ Aceptado |
 
 ## Formato
 

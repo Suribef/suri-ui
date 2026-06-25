@@ -74,6 +74,10 @@
   /* Card */
   --sui-color-card-bg: #ffffff;
   --sui-color-card-border: #e5e7eb;
+
+  /* Textarea */
+  --sui-textarea-min-height: 80px;
+  --sui-textarea-max-height: 400px;
 }
 
 /* Screen reader only utility
