@@ -3,7 +3,7 @@
 | Campo       | Valor                          |
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
-| **Fecha**   | 2025-06                        |
+| **Fecha**   | 2026-06                        |
 | **Autores** | Sergio Uribe Frenkel           |
 | **Proyecto**| SuriUI — `@suribef/suri-ui`    |
 | **Componentes afectados** | Badge (dot mode), y cualquier componente que emita warnings de desarrollo |

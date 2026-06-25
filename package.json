@@ -1,7 +1,17 @@
 {
   "name": "@suribef/suri-ui",
   "version": "0.1.0",
-  "description": "React component library by Sergio Uribe",
+  "description": "React component library by Sergio Uribe Frenkel",
+  "author": "Sergio Uribe Frenkel (@Suribef)",
+  "license": "MIT",
+  "homepage": "https://suribef.github.io/suri-ui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suribef/suri-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Suribef/suri-ui/issues"
+  },
   "type": "module",
   "main": "./dist/suri-ui.cjs",
   "module": "./dist/suri-ui.js",
@@ -16,12 +26,20 @@
         "types": "./dist/index.d.ts",
         "default": "./dist/suri-ui.cjs"
       }
-    }
+    },
+    "./styles": "./dist/suri-ui.css"
   },
   "files": [
-    "dist"
+    "dist/components",
+    "dist/utils",
+    "dist/index.d.ts",
+    "dist/suri-ui.js",
+    "dist/suri-ui.cjs",
+    "dist/suri-ui.css"
   ],
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "publishConfig": {
     "access": "public"
   },

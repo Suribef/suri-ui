@@ -3,7 +3,7 @@
 | Campo       | Valor                          |
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
-| **Fecha**   | 2025-06                        |
+| **Fecha**   | 2026-06                        |
 | **Autores** | Sergio Uribe Frenkel           |
 | **Proyecto**| SuriUI — `@suribef/suri-ui`    |
 | **Componentes afectados** | `Input`, `Textarea`, `Select`, y cualquier campo de formulario |

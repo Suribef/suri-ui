@@ -3,7 +3,7 @@
 | Campo       | Valor                          |
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
-| **Fecha**   | 2025-06                        |
+| **Fecha**   | 2026-06                        |
 | **Autores** | Sergio Uribe                   |
 | **Proyecto**| SuriUI — `@suribef/suri-ui`   |
 | **Componentes afectados** | `Input`, `Textarea`, `Select`, y cualquier componente con mensajes dinámicos |
@@ -182,7 +182,7 @@ React renderiza `{description}` como un nodo de texto. Cuando `description` es `
 El problema aparece con el formateo del JSX:
 
 ```tsx
-// ❌ RIESGOSO — con salto de línea interno
+// RIESGOSO — con salto de línea interno
 <span
   id={descriptionId}
   className={cn(...)}
@@ -196,7 +196,7 @@ El problema aparece con el formateo del JSX:
 // React renderiza ese salto como un nodo de texto vacío → ":empty" falla.
 // El span vacío OCUPA ESPACIO VISUAL aunque no haya mensaje.
 
-// ✅ SEGURO — sin saltos de línea internos
+// SEGURO — sin saltos de línea internos
 <span
   id={descriptionId}
   className={cn(...)}
@@ -357,10 +357,10 @@ container.querySelector     → verifica estructura DOM y atributos HTML
 **Caso concreto que motivó el principio — Select placeholder:**
 
 ```tsx
-// ❌ Falla correctamente — hidden excluye el elemento del árbol de accesibilidad
+// Falla correctamente — hidden excluye el elemento del árbol de accesibilidad
 screen.getByRole('option', { name: 'Selecciona un país' })
 
-// ✅ Correcto — verifica que el elemento existe en el DOM con los atributos esperados
+// Correcto — verifica que el elemento existe en el DOM con los atributos esperados
 const placeholder = container.querySelector('option[value=""]')
 expect(placeholder).toBeInTheDocument()
 expect(placeholder).toBeDisabled()

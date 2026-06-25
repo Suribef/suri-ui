@@ -3,9 +3,9 @@
 | Campo       | Valor                          |
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
-| **Fecha**   | 2025-06                        |
-| **Autores** | Sergio Uribe                   |
-| **Proyecto**| SuriUI — `@suribef/suri-ui`   |
+| **Fecha**   | 2026-06                        |
+| **Autores** | Sergio Uribe Frenkel           |
+| **Proyecto**| SuriUI — `@suribef/suri-ui`    |
 | **Componentes afectados** | `Card` |
 
 ---
@@ -124,7 +124,7 @@ La unión acotada no requiere generics en la declaración de `forwardRef`. El ti
 La implementación original del prompt casteaba el `ref`:
 
 ```tsx
-// ❌ Cast inseguro — miente sobre el tipo del nodo DOM
+// Cast inseguro — miente sobre el tipo del nodo DOM
 <Element ref={ref as React.Ref<HTMLDivElement>}>
 ```
 
@@ -133,7 +133,7 @@ Esto es problemático porque le dice a TypeScript que el ref siempre apunta a un
 La corrección castea `Element` — no `ref`:
 
 ```tsx
-// ✅ Cast en el elemento, ref permanece como HTMLElement
+// Cast en el elemento, ref permanece como HTMLElement
 const AnyElement = Element as ElementType
 <AnyElement ref={ref}>
 ```
@@ -175,10 +175,10 @@ Expandir la unión a `ElementType` completo ("full polymorphism") es trabajo pla
 ### `CardBodyProps` como type alias en lugar de interface vacía
 
 ```tsx
-// ❌ Interface vacía — dispara no-empty-interface lint error
+// Interface vacía — dispara no-empty-interface lint error
 export interface CardBodyProps extends HTMLAttributes<HTMLDivElement> {}
 
-// ✅ Type alias — semánticamente equivalente, sin lint error
+// Type alias — semánticamente equivalente, sin lint error
 export type CardBodyProps = HTMLAttributes<HTMLDivElement>
 ```
 

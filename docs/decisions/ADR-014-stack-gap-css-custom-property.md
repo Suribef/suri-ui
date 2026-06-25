@@ -3,9 +3,9 @@
 | Campo       | Valor                          |
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
-| **Fecha**   | 2025-06                        |
-| **Autores** | Sergio Uribe                   |
-| **Proyecto**| SuriUI — `@suribef/suri-ui`   |
+| **Fecha**   | 2026-06                        |
+| **Autores** | Sergio Uribe Frenkel           |
+| **Proyecto**| SuriUI — `@suribef/suri-ui`    |
 | **Componentes afectados** | `Stack` |
 
 ---
@@ -85,10 +85,10 @@ Con la Opción B, el bundle CSS de Stack es siempre el mismo tamaño independien
 La custom property inline no inyecta el valor numérico directamente:
 
 ```tsx
-// ❌ Inyecta el valor — rompe theming si el consumidor cambia el token
+// Inyecta el valor — rompe theming si el consumidor cambia el token
 style={{ gap: '1rem' }}
 
-// ✅ Inyecta una referencia al token — respeta overrides del consumidor
+// Inyecta una referencia al token — respeta overrides del consumidor
 style={{ '--sui-stack-gap': 'var(--sui-space-4)' }}
 ```
 
@@ -122,11 +122,11 @@ Este orden de merging es intencional y consistente con el principio de que el c�
 ### Por qué `GapScale` como literal union en lugar de `number`
 
 ```tsx
-// ❌ Demasiado permisivo — el consumidor puede pasar gap={7}
+// Demasiado permisivo — el consumidor puede pasar gap={7}
 // que no tiene token correspondiente
 type GapScale = number
 
-// ✅ Solo valores con tokens definidos son válidos en TypeScript
+// Solo valores con tokens definidos son válidos en TypeScript
 type GapScale = 1 | 2 | 3 | 4 | 5 | 6 | 8 | 10 | 12
 ```
 

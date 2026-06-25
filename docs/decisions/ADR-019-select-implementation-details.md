@@ -3,10 +3,10 @@
 | Campo       | Valor                          |
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
-| **Fecha**   | 2025-06                        |
-| **Autores** | Sergio Uribe                   |
-| **Proyecto**| SuriUI — `@suribef/suri-ui`   |
-| **Componentes afectados** | `Select` |
+| **Fecha**   | 2026-06                        |
+| **Autores** | Sergio Uribe Frenkel           |
+| **Proyecto**| SuriUI — `@suribef/suri-ui`    |
+| **Componentes afectados** | `Select`         |
 
 ---
 
@@ -106,7 +106,7 @@ Un select en su estado inicial (sin valor seleccionado) puede mostrar:
 El placeholder parece simple pero tiene una restricción de validación:
 
 ```html
-<!-- ❌ Opción seleccionable vacía — rompe required -->
+<!-- Opción seleccionable vacía — rompe required -->
 <select required>
   <option value="">Selecciona un país</option>
   <option value="mx">México</option>
@@ -116,7 +116,7 @@ El placeholder parece simple pero tiene una restricción de validación:
 Si el placeholder tiene `value=""` y es seleccionable, el usuario puede "seleccionar" el placeholder y el formulario lo acepta como válido a pesar de que `required` está presente — el valor vacío pasa la validación nativa del browser.
 
 ```html
-<!-- ❌ Solo disabled — visible en el dropdown, confuso -->
+<!-- Solo disabled — visible en el dropdown, confuso -->
 <select required>
   <option value="" disabled>Selecciona un país</option>
   <option value="mx">México</option>
@@ -128,7 +128,7 @@ Con solo `disabled`, la opción de placeholder aparece en el dropdown cuando el 
 ### La solución: `disabled` + `hidden`
 
 ```html
-<!-- ✓ disabled hidden — estado inicial correcto, no aparece en dropdown -->
+<!-- disabled hidden — estado inicial correcto, no aparece en dropdown -->
 <select required>
   <option value="" disabled hidden>Selecciona un país</option>
   <option value="mx">México</option>

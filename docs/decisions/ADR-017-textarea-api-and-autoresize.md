@@ -3,10 +3,10 @@
 | Campo       | Valor                          |
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
-| **Fecha**   | 2025-06                        |
-| **Autores** | Sergio Uribe                   |
-| **Proyecto**| SuriUI — `@suribef/suri-ui`   |
-| **Componentes afectados** | `Textarea` |
+| **Fecha**   | 2026-06                        |
+| **Autores** | Sergio Uribe Frenkel           |
+| **Proyecto**| SuriUI — `@suribef/suri-ui`    |
+| **Componentes afectados** | `Textarea`       |
 
 ---
 

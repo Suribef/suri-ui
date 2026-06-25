@@ -1,0 +1,8 @@
+src/
+.storybook/
+docs/
+coverage/
+dist/stories/
+dist/test-setup.d.ts
+*.stories.tsx
+*.test.tsx

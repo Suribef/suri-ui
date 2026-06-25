@@ -3,9 +3,9 @@
 | Campo       | Valor                          |
 |-------------|--------------------------------|
 | **Estado**  | Aceptado                       |
-| **Fecha**   | 2025-06                        |
-| **Autores** | Sergio Uribe                   |
-| **Proyecto**| SuriUI — `@suribef/suri-ui`   |
+| **Fecha**   | 2026-06                        |
+| **Autores** | Sergio Uribe Frenkel           |
+| **Proyecto**| SuriUI — `@suribef/suri-ui`    |
 | **Componentes afectados** | `Textarea` (autoResize), y cualquier componente que necesite acceso interno al DOM mientras expone ref al consumidor |
 
 ---
