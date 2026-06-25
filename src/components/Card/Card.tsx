@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import type { HTMLAttributes } from 'react'
+import type { ElementType, HTMLAttributes } from 'react'
 import { cn } from '../../utils/cn'
 import styles from './Card.module.css'
 
@@ -32,10 +32,14 @@ const CardBase = forwardRef<HTMLElement, CardProps>(
     },
     ref
   ) => {
+    // ElementType resuelve el conflicto de tipos para elementos dinámicos
+    // sin mentirle al compilador sobre el tipo concreto del nodo DOM.
+    // Casting Element (no ref) es el patrón correcto para uniones acotadas.
+    const AnyElement = Element as ElementType
+
     return (
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      <Element
-        ref={ref as React.Ref<HTMLDivElement>}
+      <AnyElement
+        ref={ref}
         className={cn(
           styles.card,
           shadow !== 'none' && styles[`shadow-${shadow}`],
@@ -49,7 +53,7 @@ const CardBase = forwardRef<HTMLElement, CardProps>(
         {...props}
       >
         {children}
-      </Element>
+      </AnyElement>
     )
   }
 )
@@ -81,7 +85,8 @@ export function CardHeader({
 
 CardHeader.displayName = 'Card.Header'
 
-export interface CardBodyProps extends HTMLAttributes<HTMLDivElement> {}
+// Type alias en lugar de interface vacía — evita no-empty-interface lint error
+export type CardBodyProps = HTMLAttributes<HTMLDivElement>
 
 export function CardBody({ className, children, ...props }: CardBodyProps) {
   return (
