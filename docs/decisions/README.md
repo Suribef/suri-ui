@@ -1,0 +1,42 @@
+# Architecture Decision Records — SuriUI
+
+Este directorio contiene los registros de decisiones de arquitectura (ADRs) para `@suribef/suri-ui`.
+
+Un ADR documenta una decisión técnica significativa tomada en el proyecto: el contexto en el que se tomó, la decisión en sí, y sus consecuencias. Son documentos vivos que reflejan el pensamiento de ingeniería detrás del código.
+
+## Índice
+
+| ADR | Título | Estado |
+|-----|--------|--------|
+| [ADR-001](./ADR-001-css-modules-over-tailwind.md) | CSS Modules sobre Tailwind CSS | ✅ Aceptado |
+| [ADR-002](./ADR-002-dual-format-esm-cjs.md) | Dual Format ESM + CJS con extensiones `.js` / `.cjs` | ✅ Aceptado |
+| [ADR-003](./ADR-003-aria-disabled-vs-disabled-loading.md) | `aria-disabled` vs `disabled` nativo en estado `loading` | ✅ Aceptado |
+| [ADR-004](./ADR-004-forwardref-react-19-compat.md) | `forwardRef` con compatibilidad React 19 | ✅ Aceptado |
+| [ADR-005](./ADR-005-design-tokens-single-import.md) | Design Tokens importados una sola vez en `src/index.ts` | ✅ Aceptado |
+| [ADR-006](./ADR-006-process-env-node-env-vs-import-meta-env.md) | `process.env.NODE_ENV` vs `import.meta.env.DEV` para dev warnings en librerías distribuidas | ✅ Aceptado |
+
+## Formato
+
+Cada ADR sigue la estructura de Michael Nygard con extensiones para el contexto de librería:
+
+- **Contexto** — ¿qué problema o tensión existe?
+- **Decisión** — ¿qué se decidió exactamente?
+- **Razonamiento** — ¿por qué esta opción y no las alternativas?
+- **Consecuencias** — ¿qué se gana y qué se pierde?
+- **Alternativas consideradas y descartadas** — para que el razonamiento sea auditable
+
+## Estados posibles
+
+| Estado | Significado |
+|--------|-------------|
+| 🔵 Propuesto | En discusión, no implementado |
+| ✅ Aceptado | Implementado y vigente |
+| ⚠️ Deprecado | Vigente pero planificado para reemplazo |
+| 🔄 Supersedido | Reemplazado por otro ADR (incluye referencia) |
+
+## Cómo agregar un ADR
+
+1. Crear el archivo: `ADR-NNN-titulo-descriptivo.md`
+2. Usar el formato establecido en los ADRs existentes
+3. Agregar la entrada en este índice
+4. Referenciar el ADR en el código fuente cuando sea relevante (comentarios, PR description)

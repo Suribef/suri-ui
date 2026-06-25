@@ -1,0 +1,30 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sui-font-sans);
+  font-weight: var(--sui-font-weight-medium);
+  border-radius: var(--sui-radius-full);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Sizes */
+.sm { height: 20px; padding: 0 var(--sui-space-2); font-size: 0.75rem; }
+.md { height: 24px; padding: 0 var(--sui-space-3); font-size: var(--sui-font-size-sm); }
+
+/* Modo dot */
+.dot {
+  padding: 0;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot.sm { width: 6px; height: 6px; }
+.dot.md { width: 8px; height: 8px; }
+
+/* Variants */
+.default { background-color: var(--sui-color-secondary); color: var(--sui-color-secondary-foreground); }
+.success { background-color: var(--sui-color-success);   color: var(--sui-color-success-foreground); }
+.warning { background-color: var(--sui-color-warning);   color: var(--sui-color-warning-foreground); }
+.danger  { background-color: var(--sui-color-danger);    color: var(--sui-color-danger-foreground); }
+.info    { background-color: var(--sui-color-info);      color: var(--sui-color-info-foreground); }

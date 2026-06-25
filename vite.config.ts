@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
 import { resolve } from 'path'
+import replace from '@rollup/plugin-replace'
 
 export default defineConfig({
   plugins: [
@@ -20,6 +21,14 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
+      plugins: [
+        replace({
+          preventAssignment: true,
+          values: {
+            'process.env.NODE_ENV': 'process.env.NODE_ENV'
+          }
+        })
+      ],
       output: {
         globals: {
           react: 'React',

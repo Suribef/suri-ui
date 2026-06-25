@@ -18,9 +18,13 @@
       }
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
@@ -32,8 +36,15 @@
     "test:ui": "vitest --ui",
     "lint": "eslint src --ext .ts,.tsx"
   },
-  "keywords": ["react", "components", "typescript", "ui", "component-library"],
+  "keywords": [
+    "react",
+    "components",
+    "typescript",
+    "ui",
+    "component-library"
+  ],
   "devDependencies": {
+    "@rollup/plugin-replace": "^6.0.3",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",

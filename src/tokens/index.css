@@ -22,5 +22,18 @@
   --sui-space-6: 1.5rem;
 
   --sui-radius-md: 8px;
+  --sui-radius-full: 9999px;
   --sui-transition-fast: 120ms ease;
+
+  /* Semantic — Success */
+  --sui-color-success: #dcfce7;
+  --sui-color-success-foreground: #166534;
+
+  /* Semantic — Warning */
+  --sui-color-warning: #fef9c3;
+  --sui-color-warning-foreground: #854d0e;
+
+  /* Semantic — Info */
+  --sui-color-info: #dbeafe;
+  --sui-color-info-foreground: #1e40af;
 }
